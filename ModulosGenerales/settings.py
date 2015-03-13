@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'Clientes',
     'Actividades',
     'Proveedores',
+    'Servicios',
 )
 
 MIDDLEWARE_CLASSES = (
