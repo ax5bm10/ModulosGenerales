@@ -1,21 +1,20 @@
 from django.db import models
-from Proveedores.models import Proveedores
+
+# Create your models here.
+from Clientes.models import Cliente
 from Stock.models import Productos
 
 
-# Create your models here.
-
-
-class Compra(models.Model):
-    proveedor = models.ForeignKey(Proveedores)
+class Venta(models.Model):
+    cliente = models.ForeignKey(Cliente)
     nro_comprobante = models.CharField(max_length=30)
     fecha_compra = models.DateTimeField()
     fecha_agregacion = models.DateTimeField(auto_now_add=True)
     fecha_ultima_modificacion = models.DateTimeField(auto_now=True)
 
-class Detalle_Compra(models.Model):
-    compra = models.ForeignKey(Compra)
+class Detalle_Venta(models.Model):
+    venta = models.ForeignKey(Venta)
     producto = models.ForeignKey(Productos)
     cantidad = models.IntegerField()
-    precio_unitario = models.IntegerField()
-    precio_total = models.IntegerField()
+    precio = models.IntegerField()
+    descuento = models.IntegerField()
