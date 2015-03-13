@@ -8,8 +8,8 @@ class Servicio(models.Model):
     definicion = models.TextField(max_length=1000)
     precio = models.IntegerField()
     descuento = models.IntegerField()
+    fecha_creacion = models.DateTimeField(auto_now_add=True)
 
 class Servicios(models.Model):
     cliente = models.ForeignKey(Cliente)
     servicio = models.ForeignKey(Servicio)
-
