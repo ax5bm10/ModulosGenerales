@@ -3,12 +3,13 @@ from django.db import models
 # Create your models here.
 from Clientes.models import Cliente
 from Stock.models import Productos
+from Facturacion.models import Factura
 
 
 class Venta(models.Model):
+    factura = models.ForeignKey(Factura)
     cliente = models.ForeignKey(Cliente)
-    nro_comprobante = models.CharField(max_length=30)
-    fecha_compra = models.DateTimeField()
+    fecha_venta = models.DateTimeField()
     fecha_agregacion = models.DateTimeField(auto_now_add=True)
     fecha_ultima_modificacion = models.DateTimeField(auto_now=True)
 
