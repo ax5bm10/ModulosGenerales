@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'Stock',
     'Compra',
     'Ventas',
+    'Facturacion',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -60,7 +61,6 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'ModulosGenerales.urls'
 
 WSGI_APPLICATION = 'ModulosGenerales.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases

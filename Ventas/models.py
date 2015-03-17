@@ -7,7 +7,7 @@ from Facturacion.models import Factura
 
 
 class Venta(models.Model):
-    factura = models.ForeignKey(Factura)
+    factura = models.ForeignKey(Factura,null=True)
     cliente = models.ForeignKey(Cliente)
     fecha_venta = models.DateTimeField()
     fecha_agregacion = models.DateTimeField(auto_now_add=True)
