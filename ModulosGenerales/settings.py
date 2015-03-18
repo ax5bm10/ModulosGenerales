@@ -51,6 +51,9 @@ INSTALLED_APPS = (
     'Compra',
     'Ventas',
     'Facturacion',
+
+    #api
+    'API',
 )
 
 MIDDLEWARE_CLASSES = (
