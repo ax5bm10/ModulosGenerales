@@ -37,7 +37,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #Modulos de terceros
     'swampdragon',
+    'rest_framework',
+
+    #Modulos propios
     'Clientes',
     'Actividades',
     'Proveedores',
@@ -93,3 +98,8 @@ STATIC_URL = '/static/'
 
 # SwampDragon settings
 SWAMP_DRAGON_CONNECTION = ('swampdragon.connections.sockjs_connection.DjangoSubscriberConnection', '/data')
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+    'PAGE_SIZE': 10
+}

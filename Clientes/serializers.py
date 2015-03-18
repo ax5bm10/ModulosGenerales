@@ -1,6 +1,7 @@
-from swampdragon.serializers.model_serializer import ModelSerializer
+from rest_framework import serializers
 
-class ClienteSerializer(ModelSerializer):
+class ClienteSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = 'Clientes.Cliente'
+        fields = ('nombre','apellido','ci','ruc','telefono','celular','mail',)
