@@ -103,8 +103,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
-TEMPLATE_DIRS = [os.path.join(BASE_DIR,'template')]
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
 # SwampDragon settings
 SWAMP_DRAGON_CONNECTION = ('swampdragon.connections.sockjs_connection.DjangoSubscriberConnection', '/data')
