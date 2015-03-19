@@ -17,5 +17,5 @@ class Servicios(models.Model):
     titulo = models.CharField(max_length=100)
     definicion = models.TextField(max_length=1000)
     precio = models.IntegerField()
-    descuento = models.IntegerField()
+    descuento = models.IntegerField(blank=True)
     fecha_creacion = models.DateTimeField(auto_now_add=True)

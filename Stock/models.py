@@ -7,5 +7,5 @@ class Productos(models.Model):
     nombre = models.CharField(max_length=100)
     descripcion = models.TextField(max_length=1000)
     cantidad = models.IntegerField()
-    costo_unitario = models.IntegerField(null=True)
-    costo_total = models.IntegerField(null=True)
+    costo_unitario = models.IntegerField(blank=True)
+    costo_total = models.IntegerField(blank=True)
