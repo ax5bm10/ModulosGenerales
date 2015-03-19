@@ -17,5 +17,5 @@ class Detalle_Compra(models.Model):
     compra = models.ForeignKey(Compra)
     producto = models.ForeignKey(Productos)
     cantidad = models.IntegerField()
-    precio_unitario = models.IntegerField()
-    precio_total = models.IntegerField()
+    precio_unitario = models.IntegerField(blank=True)
+    precio_total = models.IntegerField(blank=True)
