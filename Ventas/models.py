@@ -18,4 +18,4 @@ class Detalle_Venta(models.Model):
     producto = models.ForeignKey(Productos)
     cantidad = models.IntegerField()
     precio = models.IntegerField()
-    descuento = models.IntegerField()
+    descuento = models.IntegerField(blank=True)

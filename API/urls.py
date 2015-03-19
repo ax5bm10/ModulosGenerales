@@ -5,6 +5,7 @@ from Compra.views import CompraViewSet, DetalleCompraViewSet
 from Proveedores.views import ProveedoresViewSet
 from Servicios.views import ServicioViewSet, ServiciosViewSet
 from Stock.views import ProductosViewSet
+from Ventas.views import VentaViewSet, DetalleVentaViewSet
 
 
 router = routers.DefaultRouter()
@@ -19,6 +20,10 @@ router.register('servicio',ServicioViewSet)
 router.register('servicios',ServiciosViewSet)
 
 router.register('productos',ProductosViewSet)
+
+router.register('ventas',VentaViewSet)
+router.register('detalle-venta',DetalleVentaViewSet)
+
 
 
 urlpatterns = [
