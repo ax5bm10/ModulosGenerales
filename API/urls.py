@@ -1,9 +1,9 @@
 from django.conf.urls import url, include
 from rest_framework import routers
-from Clientes.views import ClienteViewSet
+from Clientes.views import ClienteViewSet, UbicacionClienteViewSet
 from Compra.views import CompraViewSet, DetalleCompraViewSet
 from Facturacion.views import FacturaViewSet
-from Proveedores.views import ProveedoresViewSet
+from Proveedores.views import ProveedoresViewSet, UbicacionProveedoresViewSet
 from Servicios.views import ServicioViewSet, ServiciosViewSet
 from Stock.views import ProductosViewSet
 from Ventas.views import VentaViewSet, DetalleVentaViewSet
@@ -11,8 +11,10 @@ from Ventas.views import VentaViewSet, DetalleVentaViewSet
 
 router = routers.DefaultRouter()
 router.register('clientes',ClienteViewSet)
+router.register('ubicacion-cliente',UbicacionClienteViewSet)
 
 router.register('proveedores',ProveedoresViewSet)
+router.register('ubicacion-proveedores',UbicacionProveedoresViewSet)
 
 router.register('compra',CompraViewSet)
 router.register('detalle-compra',DetalleCompraViewSet)
