@@ -16,8 +16,8 @@ router.register('ubicacion-cliente',UbicacionClienteViewSet)
 router.register('proveedores',ProveedoresViewSet)
 router.register('ubicacion-proveedores',UbicacionProveedoresViewSet)
 
-router.register('compra',CompraViewSet)
 router.register('detalle-compra',DetalleCompraViewSet)
+router.register('compra',CompraViewSet)
 
 router.register('servicio',ServicioViewSet)
 router.register('servicios',ServiciosViewSet)
