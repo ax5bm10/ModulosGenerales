@@ -14,7 +14,7 @@ class Compra(models.Model):
     fecha_ultima_modificacion = models.DateTimeField(auto_now=True)
 
 class Detalle_Compra(models.Model):
-    compra = models.ForeignKey(Compra)
+    compra = models.ForeignKey(Compra, related_name='detalles') #el related name es el encargado de decirle alserializer yo soy el que se esta colocando ahi
     producto = models.ForeignKey(Productos)
     cantidad = models.IntegerField()
     precio_unitario = models.IntegerField(blank=True)
