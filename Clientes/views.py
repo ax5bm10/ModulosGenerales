@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from Clientes.models import Cliente, Ubicacion
-from Clientes.serializers import ClienteSerializer
+from Clientes.models import Cliente, UbicacionCliente
+from Clientes.serializers import ClienteSerializer, UbicacionClienteSerializer
 
 
 class ClienteViewSet(viewsets.ModelViewSet):
@@ -8,5 +8,5 @@ class ClienteViewSet(viewsets.ModelViewSet):
     serializer_class = ClienteSerializer
 
 class UbicacionClienteViewSet(viewsets.ModelViewSet):
-    queryset = Ubicacion.objects.all()
-    serializer_class = ClienteSerializer
+    queryset = UbicacionCliente.objects.all()
+    serializer_class = UbicacionClienteSerializer

@@ -1,12 +1,12 @@
 from django.contrib import admin
-from models import Cliente, Ubicacion
+from models import Cliente, UbicacionCliente
 # Register your models here.
 
 class ClienteAdmin(admin.ModelAdmin):
     list_display = ('nombre','ruc')
 
-class UbicacionAdmin(admin.ModelAdmin):
+class UbicacionClienteAdmin(admin.ModelAdmin):
     list_display = ('calle','nro','barrio')
 
 admin.site.register(Cliente,ClienteAdmin)
-admin.site.register(Ubicacion,UbicacionAdmin)
+admin.site.register(UbicacionCliente,UbicacionClienteAdmin)

@@ -12,7 +12,7 @@ class Servicio(models.Model):
     fecha_agregacion = models.DateTimeField(auto_now_add=True)
     fecha_ultima_modificacion = models.DateTimeField(auto_now=True)
 
-class Servicios(models.Model):
+class DetalleServicio(models.Model):
     servicio = models.ForeignKey(Servicio)
     titulo = models.CharField(max_length=100)
     definicion = models.TextField(max_length=1000)

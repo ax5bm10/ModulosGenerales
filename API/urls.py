@@ -4,7 +4,7 @@ from Clientes.views import ClienteViewSet, UbicacionClienteViewSet
 from Compra.views import CompraViewSet, DetalleCompraViewSet
 from Facturacion.views import FacturaViewSet
 from Proveedores.views import ProveedoresViewSet, UbicacionProveedoresViewSet
-from Servicios.views import ServicioViewSet, ServiciosViewSet
+from Servicios.views import ServicioViewSet, DetalleServicioViewSet
 from Stock.views import ProductosViewSet
 from Ventas.views import VentaViewSet, DetalleVentaViewSet
 
@@ -20,7 +20,7 @@ router.register('detalle-compra',DetalleCompraViewSet)
 router.register('compra',CompraViewSet)
 
 router.register('servicio',ServicioViewSet)
-router.register('servicios',ServiciosViewSet)
+router.register('detalle-servicio',DetalleServicioViewSet)
 
 router.register('productos',ProductosViewSet)
 

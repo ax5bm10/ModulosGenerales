@@ -19,7 +19,7 @@ class Cliente(models.Model):
     def __unicode__(self):
         return u'%s %s' % (self.nombre, self.ruc)
 
-class Ubicacion(models.Model):
+class UbicacionCliente(models.Model):
     cliente = models.ForeignKey(Cliente)
     calle = models.CharField(max_length=100)
     nro = models.IntegerField()

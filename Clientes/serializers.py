@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from Clientes.models import Cliente, Ubicacion
+from Clientes.models import Cliente, UbicacionCliente
 
 
 class ClienteSerializer(serializers.HyperlinkedModelSerializer):
@@ -12,5 +12,5 @@ class ClienteSerializer(serializers.HyperlinkedModelSerializer):
 class UbicacionClienteSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
-        model = Ubicacion
+        model = UbicacionCliente
         fields = ('cliente','calle','nro','barrio')

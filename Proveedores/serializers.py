@@ -1,5 +1,4 @@
 from rest_framework import serializers
-from Clientes.models import Ubicacion
 from Proveedores.models import  Proveedores, Ubicacion
 
 

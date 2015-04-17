@@ -1,7 +1,6 @@
-from django.shortcuts import render
 from rest_framework import viewsets
-from Servicios.models import Servicio, Servicios
-from Servicios.serializers import ServicioSerializer, ServiciosSerializer
+from Servicios.models import Servicio, DetalleServicio
+from Servicios.serializers import ServicioSerializer,  DetalleServicioSerializer
 
 
 class ServicioViewSet(viewsets.ModelViewSet):
@@ -9,7 +8,7 @@ class ServicioViewSet(viewsets.ModelViewSet):
     queryset = Servicio.objects.all()
     serializer_class = ServicioSerializer
 
-class ServiciosViewSet(viewsets.ModelViewSet):
+class DetalleServicioViewSet(viewsets.ModelViewSet):
 
-    queryset = Servicios.objects.all()
-    serializer_class = ServiciosSerializer
+    queryset = DetalleServicio.objects.all()
+    serializer_class = DetalleServicioSerializer
