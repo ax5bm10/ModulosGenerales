@@ -20,7 +20,7 @@ class Cliente(models.Model):
         return u'%s %s' % (self.nombre, self.ruc)
 
 class UbicacionCliente(models.Model):
-    cliente = models.ForeignKey(Cliente)
+    cliente = models.ForeignKey(Cliente, related_name='ubicaciones') #este indica al serializador como tiene que llamar y como linkear
     calle = models.CharField(max_length=100)
     nro = models.IntegerField()
     barrio = models.TextField(max_length=15)
