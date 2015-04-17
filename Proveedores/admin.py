@@ -4,4 +4,4 @@ from models import *
 
 
 admin.site.register(Proveedores)
-admin.site.register(Ubicacion)
+admin.site.register(UbicacionProveedores)
